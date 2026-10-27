@@ -1,0 +1,24 @@
+<h1>
+    Put in your credentials to login to your account
+</h1>
+
+<style>
+    h3 {
+        color: red,
+    }
+</style>
+{% for message in messages%}
+<h3>{{message}}</h3>
+{% endfor %}
+
+<form method="POST", action="login">
+    {%csrf_token %}
+    <p>Username:</p>
+    <input type="text", name="Username">
+    <p>Password:</p>
+    <input type="password", name="Password"> <br>
+    <button type="submit">Login</button>
+</form>
+
+<h4>Don't have an account? <button type="submit"><a href="register">Register</button></h4>
+

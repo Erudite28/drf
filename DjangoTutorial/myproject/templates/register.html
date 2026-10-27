@@ -1,0 +1,24 @@
+<h1>Fill in your details below to get registered</h1>
+
+<style>
+    h5 {
+        color: red;
+    }
+</style>
+{% for message in messages %}
+    <h5>{{ message }}</h5>
+{% endfor %}
+
+<form method="POST" action="register">
+    {% csrf_token %}
+    <p>Username:</p>
+    <input type="text", name="Username">
+    <p>Email:</p>
+    <input type="email", name="Email">
+    <p>Password:</p>
+    <input type="password", name="Password">
+    <p>Confirm Password:</p>
+    <input type="password", name="Password2"> <br>
+    <button type="submit">Register</button>
+</form>
+<h4>Already have an account? <button type="submit"><a href="login">Login</button></h4>

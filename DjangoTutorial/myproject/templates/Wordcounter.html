@@ -1,0 +1,10 @@
+<!--This is a project to count the number of words you've written in a given text.When you write your text,you submit and it is counted and placed in a new template-->
+<h3>
+    Word Counter: Input your text below to be counted:
+</h3>
+
+<form method="POST" action="counter">
+    {% csrf_token %}
+    <textarea name='text' placeholder='Input your text here...' rows="20" cols="50"> </textarea> <br>
+    <button type='submit'>Submit</button>
+</form>

@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'drfapp',
+    'drf',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +131,6 @@ MAILERS = {
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':[
-        'rest_framework.authentication.Tokenauthentication'
+        'rest_framework.authentication.TokenAuthentication'
     ]
 }
